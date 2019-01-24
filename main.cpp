@@ -34,8 +34,10 @@ int main(int argc, char **argv) {
             else if(result == k_ESteamAPICallFailureSteamGone)
                 std::cerr << "The steam client has stopped responding.";
             std::cerr << std::endl;
+            SteamAPI_Shutdown();
             return 1;
         }
     }
+    SteamAPI_Shutdown();
     return 0;
 }
